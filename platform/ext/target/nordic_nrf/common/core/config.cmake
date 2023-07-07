@@ -9,8 +9,8 @@
 #-------------------------------------------------------------------------------
 
 set(HAL_NORDIC_PATH "DOWNLOAD" CACHE PATH "Path to the Nordic HAL (or DOWNLOAD to fetch automatically)")
-set(HAL_NORDIC_VERSION "nrfx-3.0.0" CACHE STRING "Version of the Nordic HAL to download")
-set(HAL_NORDIC_REMOTE "https://github.com/zephyrproject-rtos/hal_nordic" CACHE STRING "Remote of the Nordic HAL to download")
+set(HAL_NORDIC_VERSION "3c0787463c374eb5c52b79601b7319a08aa6b355" CACHE STRING "Version of the Nordic HAL to download") # 3.1.0-alpha-0
+set(HAL_NORDIC_REMOTE "https://github.com/nrfconnect/sdk-hal_nordic-next" CACHE STRING "Remote of the Nordic HAL to download")
 
 set(CONFIG_TFM_USE_TRUSTZONE            ON          CACHE BOOL    "Enable use of TrustZone to transition between NSPE and SPE")
 set(TFM_MULTI_CORE_TOPOLOGY             OFF         CACHE BOOL    "Whether to build for a dual-cpu architecture")
