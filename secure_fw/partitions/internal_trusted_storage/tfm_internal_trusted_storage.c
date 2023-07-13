@@ -512,10 +512,9 @@ static psa_status_t tfm_its_get_plain(int32_t client_id,
                          size_t *p_data_length)
 {
     psa_status_t status;
-
-#if (PSA_FRAMEWORK_HAS_MM_IOVEC != 1) && defined(TFM_PARTITION_INTERNAL_TRUSTED_STORAGE)
     size_t read_size;
-#endif
+
+	(void)read_size;
 
 #ifndef TFM_PARTITION_INTERNAL_TRUSTED_STORAGE
     /* Read file data from the filesystem */
@@ -570,11 +569,9 @@ psa_status_t tfm_its_get(int32_t client_id,
                          size_t *p_data_length)
 {
     psa_status_t status;
-
-    #if (PSA_FRAMEWORK_HAS_MM_IOVEC != 1) && defined(TFM_PARTITION_INTERNAL_TRUSTED_STORAGE) \
-        && (ITS_ENCRYPTION != 1)
     size_t read_size;
-    #endif
+
+	(void)read_size;
 
 #ifdef TFM_PARTITION_TEST_PS
     /* The PS test partition can call tfm_its_get() through PS code. Treat it
